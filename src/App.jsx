@@ -2,7 +2,6 @@ import { toast, ToastContainer } from 'react-toastify'
 import { Form } from './components/Form'
 import 'react-toastify/dist/ReactToastify.css'
 
-
 import './App.css'
 
 function App() {
