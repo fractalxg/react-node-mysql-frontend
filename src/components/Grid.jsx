@@ -3,7 +3,7 @@ import { FaTrash, FaEdit } from "react-icons/fa";
 import { toast } from "react-toastify";
 import "./Grid.css";
 
-const Grid = () => {
+const Grid = ({users}) => {
   return (
       <table className="table">
         <thead>
@@ -16,7 +16,15 @@ const Grid = () => {
           </tr>
         </thead>
 				<tbody>
-					
+					{users && users.map((item) => (
+						<tr key={item.id}>
+							<td>{item.nome}</td>
+							<td>{item.email}</td>
+							<td>{item.fone}</td>
+							<td width="5%"><FaEdit /></td>
+							<td width="5%"><FaTrash onClick={() => handleDelete(item.id)}/></td>
+						</tr>
+					))}
 				</tbody>
       </table>
   )

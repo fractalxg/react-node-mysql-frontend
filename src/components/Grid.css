@@ -13,3 +13,9 @@ th {
     border-bottom: inset;
     padding-bottom: 5px;
 }
+
+td {
+    padding-top: 15px;
+    text-align: center;
+    width: auto;
+}
